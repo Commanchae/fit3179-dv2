@@ -1,0 +1,902 @@
+[
+  {
+    "state": "ACT",
+    "data": [
+      {
+        "year": 2004,
+        "population": 329498,
+        "netflow": 840
+      },
+      {
+        "year": 2005,
+        "population": 333505,
+        "netflow": 1150
+      },
+      {
+        "year": 2006,
+        "population": 338381,
+        "netflow": 1940
+      },
+      {
+        "year": 2007,
+        "population": 344176,
+        "netflow": 2490
+      },
+      {
+        "year": 2008,
+        "population": 351101,
+        "netflow": 3640
+      },
+      {
+        "year": 2009,
+        "population": 357859,
+        "netflow": 3130
+      },
+      {
+        "year": 2010,
+        "population": 364833,
+        "netflow": 1710
+      },
+      {
+        "year": 2011,
+        "population": 372070,
+        "netflow": 4040
+      },
+      {
+        "year": 2012,
+        "population": 379812,
+        "netflow": 2920
+      },
+      {
+        "year": 2013,
+        "population": 386318,
+        "netflow": 2670
+      },
+      {
+        "year": 2014,
+        "population": 391981,
+        "netflow": 3490
+      },
+      {
+        "year": 2015,
+        "population": 398874,
+        "netflow": 3310
+      },
+      {
+        "year": 2016,
+        "population": 408878,
+        "netflow": 4160
+      },
+      {
+        "year": 2017,
+        "population": 420226,
+        "netflow": 4590
+      },
+      {
+        "year": 2018,
+        "population": 430758,
+        "netflow": 2800
+      },
+      {
+        "year": 2019,
+        "population": 440267,
+        "netflow": 2220
+      },
+      {
+        "year": 2020,
+        "population": 447650,
+        "netflow": -3160
+      },
+      {
+        "year": 2021,
+        "population": 452670,
+        "netflow": 3410
+      },
+      {
+        "year": 2022,
+        "population": 461192,
+        "netflow": 8750
+      }
+    ]
+  },
+  {
+    "state": "AUS",
+    "data": [
+      {
+        "year": 2004,
+        "population": 20046003,
+        "netflow": 142620
+      },
+      {
+        "year": 2005,
+        "population": 20311543,
+        "netflow": 171780
+      },
+      {
+        "year": 2006,
+        "population": 20627547,
+        "netflow": 232850
+      },
+      {
+        "year": 2007,
+        "population": 21016121,
+        "netflow": 277440
+      },
+      {
+        "year": 2008,
+        "population": 21475625,
+        "netflow": 299960
+      },
+      {
+        "year": 2009,
+        "population": 21865623,
+        "netflow": 196190
+      },
+      {
+        "year": 2010,
+        "population": 22172469,
+        "netflow": 180450
+      },
+      {
+        "year": 2011,
+        "population": 22522197,
+        "netflow": 232080
+      },
+      {
+        "year": 2012,
+        "population": 22928023,
+        "netflow": 230380
+      },
+      {
+        "year": 2013,
+        "population": 23297777,
+        "netflow": 187760
+      },
+      {
+        "year": 2014,
+        "population": 23640331,
+        "netflow": 184110
+      },
+      {
+        "year": 2015,
+        "population": 23984581,
+        "netflow": 206380
+      },
+      {
+        "year": 2016,
+        "population": 24385064,
+        "netflow": 263460
+      },
+      {
+        "year": 2017,
+        "population": 24759018,
+        "netflow": 238230
+      },
+      {
+        "year": 2018,
+        "population": 25146140,
+        "netflow": 241440
+      },
+      {
+        "year": 2019,
+        "population": 25520468,
+        "netflow": 192710
+      },
+      {
+        "year": 2020,
+        "population": 25630698,
+        "netflow": -84990
+      },
+      {
+        "year": 2021,
+        "population": 25771357,
+        "netflow": 203620
+      },
+      {
+        "year": 2022,
+        "population": 26313140,
+        "netflow": 518050
+      }
+    ]
+  },
+  {
+    "state": "NSW",
+    "data": [
+      {
+        "year": 2004,
+        "population": 6669206,
+        "netflow": 47500
+      },
+      {
+        "year": 2005,
+        "population": 6718023,
+        "netflow": 53630
+      },
+      {
+        "year": 2006,
+        "population": 6786160,
+        "netflow": 73600
+      },
+      {
+        "year": 2007,
+        "population": 6883852,
+        "netflow": 87410
+      },
+      {
+        "year": 2008,
+        "population": 7001782,
+        "netflow": 86740
+      },
+      {
+        "year": 2009,
+        "population": 7101504,
+        "netflow": 57170
+      },
+      {
+        "year": 2010,
+        "population": 7179891,
+        "netflow": 51780
+      },
+      {
+        "year": 2011,
+        "population": 7258722,
+        "netflow": 57280
+      },
+      {
+        "year": 2012,
+        "population": 7353189,
+        "netflow": 66860
+      },
+      {
+        "year": 2013,
+        "population": 7454938,
+        "netflow": 67020
+      },
+      {
+        "year": 2014,
+        "population": 7562171,
+        "netflow": 70390
+      },
+      {
+        "year": 2015,
+        "population": 7671401,
+        "netflow": 80080
+      },
+      {
+        "year": 2016,
+        "population": 7795625,
+        "netflow": 105630
+      },
+      {
+        "year": 2017,
+        "population": 7900946,
+        "netflow": 90640
+      },
+      {
+        "year": 2018,
+        "population": 8003564,
+        "netflow": 84600
+      },
+      {
+        "year": 2019,
+        "population": 8088361,
+        "netflow": 57920
+      },
+      {
+        "year": 2020,
+        "population": 8094300,
+        "netflow": -7280
+      },
+      {
+        "year": 2021,
+        "population": 8101223,
+        "netflow": 69060
+      },
+      {
+        "year": 2022,
+        "population": 8248249,
+        "netflow": 174120
+      }
+    ]
+  },
+  {
+    "state": "NT",
+    "data": [
+      {
+        "year": 2004,
+        "population": 203857,
+        "netflow": 980
+      },
+      {
+        "year": 2005,
+        "population": 207385,
+        "netflow": 600
+      },
+      {
+        "year": 2006,
+        "population": 211029,
+        "netflow": 1160
+      },
+      {
+        "year": 2007,
+        "population": 216618,
+        "netflow": 1630
+      },
+      {
+        "year": 2008,
+        "population": 222526,
+        "netflow": 2130
+      },
+      {
+        "year": 2009,
+        "population": 227783,
+        "netflow": 1240
+      },
+      {
+        "year": 2010,
+        "population": 230299,
+        "netflow": 1140
+      },
+      {
+        "year": 2011,
+        "population": 232952,
+        "netflow": 3340
+      },
+      {
+        "year": 2012,
+        "population": 238728,
+        "netflow": 4370
+      },
+      {
+        "year": 2013,
+        "population": 242304,
+        "netflow": 1750
+      },
+      {
+        "year": 2014,
+        "population": 242753,
+        "netflow": 2350
+      },
+      {
+        "year": 2015,
+        "population": 244090,
+        "netflow": 1090
+      },
+      {
+        "year": 2016,
+        "population": 246065,
+        "netflow": 1800
+      },
+      {
+        "year": 2017,
+        "population": 246862,
+        "netflow": 770
+      },
+      {
+        "year": 2018,
+        "population": 245920,
+        "netflow": 950
+      },
+      {
+        "year": 2019,
+        "population": 246213,
+        "netflow": 290
+      },
+      {
+        "year": 2020,
+        "population": 247819,
+        "netflow": -440
+      },
+      {
+        "year": 2021,
+        "population": 248125,
+        "netflow": 2360
+      },
+      {
+        "year": 2022,
+        "population": 251320,
+        "netflow": 3310
+      }
+    ]
+  },
+  {
+    "state": "QLD",
+    "data": [
+      {
+        "year": 2004,
+        "population": 3872351,
+        "netflow": 26740
+      },
+      {
+        "year": 2005,
+        "population": 3964175,
+        "netflow": 32700
+      },
+      {
+        "year": 2006,
+        "population": 4055845,
+        "netflow": 46180
+      },
+      {
+        "year": 2007,
+        "population": 4159990,
+        "netflow": 53940
+      },
+      {
+        "year": 2008,
+        "population": 4275551,
+        "netflow": 59370
+      },
+      {
+        "year": 2009,
+        "population": 4367454,
+        "netflow": 35920
+      },
+      {
+        "year": 2010,
+        "population": 4436882,
+        "netflow": 34630
+      },
+      {
+        "year": 2011,
+        "population": 4518649,
+        "netflow": 46610
+      },
+      {
+        "year": 2012,
+        "population": 4611304,
+        "netflow": 41860
+      },
+      {
+        "year": 2013,
+        "population": 4685439,
+        "netflow": 27220
+      },
+      {
+        "year": 2014,
+        "population": 4747263,
+        "netflow": 20530
+      },
+      {
+        "year": 2015,
+        "population": 4804933,
+        "netflow": 24990
+      },
+      {
+        "year": 2016,
+        "population": 4882939,
+        "netflow": 34140
+      },
+      {
+        "year": 2017,
+        "population": 4960965,
+        "netflow": 27750
+      },
+      {
+        "year": 2018,
+        "population": 5046434,
+        "netflow": 31730
+      },
+      {
+        "year": 2019,
+        "population": 5129741,
+        "netflow": 28040
+      },
+      {
+        "year": 2020,
+        "population": 5184329,
+        "netflow": -12830
+      },
+      {
+        "year": 2021,
+        "population": 5261012,
+        "netflow": 29690
+      },
+      {
+        "year": 2022,
+        "population": 5386543,
+        "netflow": 84000
+      }
+    ]
+  },
+  {
+    "state": "SA",
+    "data": [
+      {
+        "year": 2004,
+        "population": 1532562,
+        "netflow": 8610
+      },
+      {
+        "year": 2005,
+        "population": 1544852,
+        "netflow": 11880
+      },
+      {
+        "year": 2006,
+        "population": 1561300,
+        "netflow": 14660
+      },
+      {
+        "year": 2007,
+        "population": 1578489,
+        "netflow": 15280
+      },
+      {
+        "year": 2008,
+        "population": 1597880,
+        "netflow": 18060
+      },
+      {
+        "year": 2009,
+        "population": 1618578,
+        "netflow": 14580
+      },
+      {
+        "year": 2010,
+        "population": 1632482,
+        "netflow": 9190
+      },
+      {
+        "year": 2011,
+        "population": 1647183,
+        "netflow": 12330
+      },
+      {
+        "year": 2012,
+        "population": 1663082,
+        "netflow": 11720
+      },
+      {
+        "year": 2013,
+        "population": 1678052,
+        "netflow": 11670
+      },
+      {
+        "year": 2014,
+        "population": 1693107,
+        "netflow": 11210
+      },
+      {
+        "year": 2015,
+        "population": 1705937,
+        "netflow": 11330
+      },
+      {
+        "year": 2016,
+        "population": 1719580,
+        "netflow": 12240
+      },
+      {
+        "year": 2017,
+        "population": 1735654,
+        "netflow": 12730
+      },
+      {
+        "year": 2018,
+        "population": 1755715,
+        "netflow": 15180
+      },
+      {
+        "year": 2019,
+        "population": 1778928,
+        "netflow": 14990
+      },
+      {
+        "year": 2020,
+        "population": 1794514,
+        "netflow": -2850
+      },
+      {
+        "year": 2021,
+        "population": 1805733,
+        "netflow": 14330
+      },
+      {
+        "year": 2022,
+        "population": 1835948,
+        "netflow": 27780
+      }
+    ]
+  },
+  {
+    "state": "TAS",
+    "data": [
+      {
+        "year": 2004,
+        "population": 484778,
+        "netflow": 1170
+      },
+      {
+        "year": 2005,
+        "population": 488098,
+        "netflow": 1370
+      },
+      {
+        "year": 2006,
+        "population": 491515,
+        "netflow": 1400
+      },
+      {
+        "year": 2007,
+        "population": 495858,
+        "netflow": 1810
+      },
+      {
+        "year": 2008,
+        "population": 501774,
+        "netflow": 2150
+      },
+      {
+        "year": 2009,
+        "population": 506461,
+        "netflow": 1640
+      },
+      {
+        "year": 2010,
+        "population": 510219,
+        "netflow": 1010
+      },
+      {
+        "year": 2011,
+        "population": 511739,
+        "netflow": 1570
+      },
+      {
+        "year": 2012,
+        "population": 511813,
+        "netflow": 1590
+      },
+      {
+        "year": 2013,
+        "population": 513015,
+        "netflow": 1760
+      },
+      {
+        "year": 2014,
+        "population": 514040,
+        "netflow": 1500
+      },
+      {
+        "year": 2015,
+        "population": 515694,
+        "netflow": 1760
+      },
+      {
+        "year": 2016,
+        "population": 521981,
+        "netflow": 2350
+      },
+      {
+        "year": 2017,
+        "population": 531561,
+        "netflow": 2780
+      },
+      {
+        "year": 2018,
+        "population": 542927,
+        "netflow": 3170
+      },
+      {
+        "year": 2019,
+        "population": 553340,
+        "netflow": 3620
+      },
+      {
+        "year": 2020,
+        "population": 561881,
+        "netflow": -340
+      },
+      {
+        "year": 2021,
+        "population": 568628,
+        "netflow": 3380
+      },
+      {
+        "year": 2022,
+        "population": 572647,
+        "netflow": 3950
+      }
+    ]
+  },
+  {
+    "state": "VIC",
+    "data": [
+      {
+        "year": 2004,
+        "population": 4957147,
+        "netflow": 37740
+      },
+      {
+        "year": 2005,
+        "population": 5023203,
+        "netflow": 45020
+      },
+      {
+        "year": 2006,
+        "population": 5103965,
+        "netflow": 62540
+      },
+      {
+        "year": 2007,
+        "population": 5199503,
+        "netflow": 73590
+      },
+      {
+        "year": 2008,
+        "population": 5313285,
+        "netflow": 83700
+      },
+      {
+        "year": 2009,
+        "population": 5419249,
+        "netflow": 53730
+      },
+      {
+        "year": 2010,
+        "population": 5495711,
+        "netflow": 44630
+      },
+      {
+        "year": 2011,
+        "population": 5591818,
+        "netflow": 56220
+      },
+      {
+        "year": 2012,
+        "population": 5709586,
+        "netflow": 59130
+      },
+      {
+        "year": 2013,
+        "population": 5832585,
+        "netflow": 56910
+      },
+      {
+        "year": 2014,
+        "population": 5957512,
+        "netflow": 60670
+      },
+      {
+        "year": 2015,
+        "population": 6093049,
+        "netflow": 72240
+      },
+      {
+        "year": 2016,
+        "population": 6235781,
+        "netflow": 91340
+      },
+      {
+        "year": 2017,
+        "population": 6358210,
+        "netflow": 86990
+      },
+      {
+        "year": 2018,
+        "population": 6479695,
+        "netflow": 85540
+      },
+      {
+        "year": 2019,
+        "population": 6590050,
+        "netflow": 60630
+      },
+      {
+        "year": 2020,
+        "population": 6567195,
+        "netflow": -53000
+      },
+      {
+        "year": 2021,
+        "population": 6566092,
+        "netflow": 66080
+      },
+      {
+        "year": 2022,
+        "population": 6717414,
+        "netflow": 154240
+      }
+    ]
+  },
+  {
+    "state": "WA",
+    "data": [
+      {
+        "year": 2004,
+        "population": 1994241,
+        "netflow": 19270
+      },
+      {
+        "year": 2005,
+        "population": 2029936,
+        "netflow": 25540
+      },
+      {
+        "year": 2006,
+        "population": 2076867,
+        "netflow": 31420
+      },
+      {
+        "year": 2007,
+        "population": 2135006,
+        "netflow": 41250
+      },
+      {
+        "year": 2008,
+        "population": 2208928,
+        "netflow": 44360
+      },
+      {
+        "year": 2009,
+        "population": 2263747,
+        "netflow": 28900
+      },
+      {
+        "year": 2010,
+        "population": 2319063,
+        "netflow": 36430
+      },
+      {
+        "year": 2011,
+        "population": 2385947,
+        "netflow": 50830
+      },
+      {
+        "year": 2012,
+        "population": 2457489,
+        "netflow": 42170
+      },
+      {
+        "year": 2013,
+        "population": 2502188,
+        "netflow": 18750
+      },
+      {
+        "year": 2014,
+        "population": 2528619,
+        "netflow": 14150
+      },
+      {
+        "year": 2015,
+        "population": 2547745,
+        "netflow": 11600
+      },
+      {
+        "year": 2016,
+        "population": 2569606,
+        "netflow": 12110
+      },
+      {
+        "year": 2017,
+        "population": 2599928,
+        "netflow": 12040
+      },
+      {
+        "year": 2018,
+        "population": 2636404,
+        "netflow": 17500
+      },
+      {
+        "year": 2019,
+        "population": 2688799,
+        "netflow": 25170
+      },
+      {
+        "year": 2020,
+        "population": 2728187,
+        "netflow": -5080
+      },
+      {
+        "year": 2021,
+        "population": 2763015,
+        "netflow": 15320
+      },
+      {
+        "year": 2022,
+        "population": 2834886,
+        "netflow": 61530
+      }
+    ]
+  }
+]
