@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": { "url": "australian-states-flow-by-origin-year.csv"},
+  "background":"#FCFFF7",
+  "title": {
+    "text": "International Migration into Australia by Country (2022)",
+    "font": "Arial",
+    "color":"#286d86"
+  },
+  "params": [
+    {
+      "name": "top_countries",
+      "value": 5,
+      "bind": {
+        "input": "range",
+        "min": 5,
+        "max": 10,
+        "step": 1,
+        "name": "Top K Countries: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "datum.year == 2022"},
+    {"filter": "datum.state_name == 'AUS'"},
+    {"calculate": "toNumber(datum.flow)", "as": "flow"},
+    {
+      "window": [{
+        "op": "rank",
+        "as": "rank"
+      }],
+      "sort": [{ "field": "flow", "order": "descending" }]
+    },
+    {
+      "filter": "datum.rank <= top_countries"
+    }
+  ],
+  "width": "container",
+  "height": 200,
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "flow",
+          "type": "quantitative",
+          "title": "Net Flow",
+          "scale": {
+            "reverse":true
+          },
+          "axis": {
+            "titleColor": "#286d86"
+          }
+        },
+        "y": {
+          "field": "origin",
+          "title": "Country of Origin",
+          "type": "nominal",
+          "sort": null,
+          "axis": {
+            "titleX": 80,
+            "orient":"right",
+            "titleColor": "#286d86"
+          }
+        },
+        "color": {
+          "field": "origin",
+          "title": null,
+          "legend": null
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -35,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "flow",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "origin",
+          "type": "nominal",
+          "sort": {
+            "field": "flow",
+            "order": "descending"
+          }
+        },
+        "text": {
+          "field": "flow",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}

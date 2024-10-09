@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="header">
+        <br>
+    <h1>Australian Migration Visualization</h2>
+    <h3>Shows detailed information about overseas migration into Australia by state and country</h4>
+        <br>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item span-two-columns bottom-highlight ">
+            <p class="text" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="grid-item span-two-columns grid-title">
+            International Migration Patterns in Australia
+        </div>
+
+        <div class="grid-item bottom-highlight">
+            <p class="text" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+
+        <div class="grid-item bottom-highlight" id="map_chart">
+            <script>
+                        var vg_1 = "map.vg.json";
+        vegaEmbed("#map_chart", vg_1).then(function(result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+            </script>
+        </div>
+
+        <div class="grid-item span-two-columns grid-title">
+            Top Countries of International Migration into Australia
+        </div>
+
+        <div class="grid-item bottom-highlight">
+            <p class="text" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>  
+        <div class="grid-item bottom-highlight" id="country-bar"></div>
+        <script>
+            var vg_4 = "top_country.vg.json";
+vegaEmbed("#country-bar", vg_4).then(function(result) {
+// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+</script>
+
+        <div class="grid-item span-two-columns grid-title">
+            Inflow/Outflow Trends Across Time
+        </div>
+        <div class="grid-item bottom-highlight">
+            <p class="text" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="grid-item bottom-highlight" id="diverging">
+            
+            <script>
+                var vg_2 = "diverging.vg.json";
+vegaEmbed("#diverging", vg_2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+    </script>
+
+        </div>  
+
+        <div class="grid-item span-two-columns grid-title">
+            Net Flow Trends by State
+        </div>
+        <div class="grid-item bottom-highlight" >
+            <p class="text" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <div class="grid-item bottom-highlight"id="line_chart">
+            <script>
+                var vg_3 = "line_chart.vg.json";
+vegaEmbed("#line_chart", vg_3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+    </script>
+        </div>
+      </div>
+</body>
+</html>

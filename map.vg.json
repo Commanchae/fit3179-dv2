@@ -1,0 +1,242 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text":"Net Flow of International Migrants by State (2022)",
+    "font": "Arial",
+    "subtitle": "(per 10,000 population)",
+    "color":"#286d86",
+    "subtitleColor":"#698691",
+    "subtitleFont": "Arial"
+  },
+  "background":"#FCFFF7",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "padding": 0,
+  "width": "700",  
+  "height": "400", 
+  "projection": {
+    "type": "mercator"
+  },
+  "data": {
+    "url": "australia-states.topojson.json",
+    "format": {
+      "type": "topojson",
+      "feature": "georef-australia-state@public"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.ste_iso3166_code",
+      "from": {
+        "data": {
+          "url": "australian-states-flow-by-year.csv"
+        },
+        "key": "state",
+        "fields": [
+          "year",
+          "population",
+          "netflow"
+        ]
+      }
+    },
+    {
+      "filter": "datum.year == 2022"
+    },
+    {"calculate": "datum.netflow/datum.population * 10000", "as": "normalized_netflow"}
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape"
+      },
+      "encoding": {
+        "color":{
+          "field":"normalized_netflow",
+          "type":"quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [100, 155, 200, 220],
+            "range": ["#ccf9ff", "#7ce8ff", "#55d0ff",
+            "#00acdf", "#0080bf"]
+            },
+
+          "legend": {
+            "title": "Net Flow of International Migrants",
+            "titleFont": "Arial",
+            "titleLimit": 400,
+            "rowPadding":4,
+            "orient": "right",
+            "titleColor": "#286d86",
+            "labelColor": "#698691"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.ste_name[0]",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "normalized_netflow",
+            "type": "quantitative",
+            "title": "Net Flow of Migrants (per 10,000 population)",
+            "format": ".3"
+          }
+        ]
+      }
+    },
+    {
+      "mark":{
+        "type":"text",
+        "font": "Arial",
+        "dy": -10
+      },
+      "encoding":{
+        "longitude": {"field": "properties.geo_point_2d.lon",
+      "type": "quantitative"},
+        "latitude": {
+          "field":"properties.geo_point_2d.lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "properties.ste_iso3166_code",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "properties.ste_name[0]",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "normalized_netflow",
+            "type": "quantitative",
+            "title": "Net Flow of Migrants (per 10,000 population)",
+            "format": ".3"
+          }
+        ]
+      }
+    },
+    {
+      "data": {"values": [{"x": 1.24, "y": 0.9}]},
+      "mark": {"type": "text", "angle": -30, "dx": -20, "fontSize": 35},
+      "encoding": {
+        "text": {"value": "➟"},
+        "x": {"field": "x", "type": "quantitative","axis": {"domain": false, "grid": false, "ticks": false, "labelFontSize":0, "titleFontSize": 0}},
+        "y": {"field": "y", "type": "quantitative","axis": {"domain": false, "grid": false, "ticks": false, "labelFontSize":0, "titleFontSize": 0}},
+        "color": {
+          "value": "black" 
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 1.24, "y": 0.9}]},
+      "mark": {"type": "text", "angle": 0, "dx": -125, "dy":17, "fontSize": 12},
+      "encoding": {
+        "text": {"value": "(Victoria) Highest migration of 230"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "#286d86"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 1.40, "y": 0.25}]},
+      "mark": {"type": "text", "angle": -180, "dx": -20, "fontSize": 35},
+      "encoding": {
+        "text": {"value": "➟"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "black"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 1.57, "y": 0.25}]},
+      "mark": {"type": "text", "angle": 0, "dx": 90,"fontSize": 12},
+      "encoding": {
+        "text": {"value": "(Tasmania) Lowest migration of 69"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "#286d86"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 0.5, "y": 2.8}]},
+      "mark": {"type": "text", "angle": -340, "dx": -20, "fontSize": 35},
+      "encoding": {
+        "text": {"value": "➟"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "black"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 0.25, "y": 3.47}]},
+      "mark": {"type": "text", "angle": 0,"fontSize": 12},
+      "encoding": {
+        "text": {"value": "(Western Australia)"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "#286d86"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 0.25, "y": 3.3}]},
+      "mark": {"type": "text", "angle": 0,"fontSize": 12},
+      "encoding": {
+        "text": {"value": "Second highest value"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "#286d86"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [{"x": 0.30, "y": 3.13}]},
+      "mark": {"type": "text", "angle": 0,"fontSize": 12},
+      "encoding": {
+        "text": {"value": "of 217"},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"},
+        "color": {
+          "value": "#286d86"
+        }
+      }
+      
+    },
+    {
+      "data": {"values": [ {"x": 2, "y": 4}]},
+      "mark": {"type": "text", "angle": -30, "dx": -20, "fontSize": 35},
+      "encoding": {
+        "text": {"value": ""},
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "quantitative"}
+      }
+      
+    }
+  ]
+}

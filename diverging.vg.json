@@ -1,0 +1,165 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background":"#FCFFF7",
+  "data": { "url": "australian-netflow.csv"},
+  "width": "container",
+  "height": 200,
+  "layer":[
+{  "mark": "bar",
+  "title": {"text": "Australia's Migration Inflow vs. Outflow over Time", "color":"#286d86"},
+  "encoding": {
+    "x": {
+      "field": "year",
+      "sort": "ascending",
+      "axis": {
+        "labelAngle": -45,
+        "titleColor": "#286d86"
+      }
+    },
+    "y": {
+      "aggregate": "sum", "field": "flow",
+      "title": "Flow",
+
+      "axis": {"format": "s",
+    "titleX": -56,
+  "titleColor": "#286d86"}
+    },
+    "color": {
+      "field": "type",
+      "scale": {"range": ["#da7b31", "#4870ff"]},
+      "legend": {"orient": "right", "title": "Flow Type", "titleColor": "#286d86"}
+    },
+    "tooltip": [
+      {"field": "year",
+    "title":"Year"},
+      {"field": "type",
+      "title": "Type"},
+      {"field": "flow",
+    "title": "Flow",
+  "format": ".3s"}
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }},
+  {
+    "data": {"values": [{"x": 2020, "y": 0}]},
+    "mark": "rule",
+    "encoding": {
+      "x": {
+        "field": "x"
+      },
+      "color": {
+        "value": "red"
+      },
+      "size": {
+        "value": 2
+      }
+  
+    }
+  },
+  {
+    "data": {"values": [{"x": 2020, "y": 0}]},
+    "mark": {"type":"text", "dy":-110},
+    "encoding": {
+      "x": {
+        "field": "x",
+        "axis": {
+          "title": "Year"
+        }
+      },
+      
+      "text": {
+        "value": "Covid pandemic hit..."
+      }
+  
+    }
+  },
+  {
+    "data": {"values": [{"x": 2018, "y": 0}]},
+    "mark": {"type":"text", "dx":-10,"dy": -85},
+    "encoding": {
+      "x": {
+        "field": "x",
+        "axis": {
+          "title": "Year"
+        }
+      },
+      
+      "text": {
+        "value": "The pandemic saw a huge"
+      }
+  
+    }
+  },
+  {
+    "data": {"values": [{"x": 2019, "y": 0}]},
+    "mark": {"type":"text", "dx":-20,"dy": -70},
+    "encoding": {
+      "x": {
+        "field": "x",
+        "axis": {
+          "title": "Year"
+        }
+      },
+      
+      "text": {
+        "value": "decrease in inflow."
+      }
+  
+    }
+  },
+  {
+    "data": {"values": [{"x": 2022, "y": 0}]},
+    "mark": {"type":"text", "dx":-50, "fontSize": 35, "angle": -135},
+    "encoding": {
+      "x": {
+        "field": "x",
+        "axis": {
+          "title": "Year"
+        }
+      },
+      
+      "text": {
+        "value": "➟"
+      }
+  
+    }
+  },
+  {
+    "data": {"values": [{"x": 2022, "y": 0}]},
+    "mark": {"type":"text", "dx":80,"dy": 60},
+    "encoding": {
+      "x": {
+        "field": "x",
+        "axis": {
+          "title": "Year"
+        }
+      },
+      
+      "text": {
+        "value": "Major increase in inflow"
+      }
+  
+    }
+  },
+  {
+    "data": {"values": [{"x": 2022, "y": 0}]},
+    "mark": {"type":"text", "dx":80,"dy": 75},
+    "encoding": {
+      "x": {
+        "field": "x",
+        "axis": {
+          "title": "Year"
+        }
+      },
+      
+      "text": {
+        "value": "after pandemic."
+      }
+  
+    }
+  }
+]
+}
