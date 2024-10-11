@@ -16,7 +16,7 @@
         "min": 5,
         "max": 10,
         "step": 1,
-        "name": "Top K Countries: "
+        "name": "Select number of countries: "
       }
     }
   ],
@@ -39,7 +39,7 @@
   "height": 200,
   "layer": [
     {
-      "mark": "bar",
+      "mark": {"type": "bar", "cornerRadius": 4},
       "encoding": {
         "x": {
           "field": "flow",
@@ -49,7 +49,8 @@
             "reverse":true
           },
           "axis": {
-            "titleColor": "#286d86"
+            "titleColor": "#286d86",
+            "labelColor": "#286d86"
           }
         },
         "y": {
@@ -60,13 +61,18 @@
           "axis": {
             "titleX": 80,
             "orient":"right",
-            "titleColor": "#286d86"
+            "titleColor": "#286d86",
+            "labelColor": "#286d86"
           }
         },
         "color": {
           "field": "origin",
           "title": null,
-          "legend": null
+          "legend": null,
+          "scale":{
+            "domain": ["India", "China", "Philippines", "Nepal", "Colombia", "UK, CIs & IOM", "Vietnam", "Pakistan", "New Zealand", "Thailand"],
+            "range": ["#005cad", "#007ae6", "#2498ff", "#4aaaff", "#70bcff", "#8ac8ff", "#7dd6ff", "#8fdcff", "#98dbfa", "#bdeaff"]
+          }
         }
       }
     },
@@ -75,7 +81,8 @@
         "type": "text",
         "align": "left",
         "dx": -35,
-        "fontWeight": "bold"
+        "fontWeight": "bold",
+        "color": "#286d86"
       },
       "encoding": {
         "x": {

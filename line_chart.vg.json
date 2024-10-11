@@ -39,20 +39,29 @@
           "encoding": {
             "x": {
               "field": "year",
-              "type": "temporal"
+              "type": "temporal",
+              "axis": {
+                "labelColor": "#286d86"
+              }
             },
             "y": {
               "field": "netflow",
               "type": "quantitative",
               "axis": {
     "titleX": -60,
-  "titleColor": "#286d86"}
+  "titleColor": "#286d86",
+  "labelColor": "#286d86"}
             },
             "color": {
               "field": "state",
+              "scale": {
+                "domain": ["ACT", "NSW", "NT", "QLD", "SA", "TAS", "VIC", "WA"],
+                "range": ["#00f9c6", "#bc75d3", "#00d2ff", "#00a3ff", "#7270ff", "#878bf3", "#d169b9", "#00459f"]
+              },
               "legend": {
-                "title": "State",
-                "titleColor": "#286d86"
+                "title": "State (Click to select!)",
+                "titleColor": "#286d86",
+                  "labelColor": "#286d86"
               }
             },
             "opacity": {
@@ -117,7 +126,7 @@
             "values": [
               {
                 "year": "2020-01-01",
-                "text": "Covid Pandemic hit...",
+                "text": "Covid Pandemic started.",
                 "y": 200
               }
             ]
@@ -156,11 +165,12 @@
                 "y": {
                   "field": "y",
                   "type": "quantitative"
-                },
+                },      "color": {"value": "#286d86"},
                 "text": {
                   "field": "text",
                   "type": "nominal"
                 }
+                
               }
             }
           ]

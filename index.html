@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
@@ -13,43 +17,46 @@
 <body>
     <div id="header">
         <br>
-    <h1>Australian Migration Visualization</h2>
-    <h3>Shows detailed information about overseas migration into Australia by state and country</h4>
+    <h1><i>Australian Migration Visualization</i></h2>
+    <h3 >Shows detailed information about overseas migration into Australia by state and country</h4>
         <br>
     </div>
     <div class="grid-container">
         <div class="grid-item span-two-columns bottom-highlight ">
-            <p class="text" style="width:50%;text-align: justify;">
-                Ever since World War II, increased international migration into Australia has cultivated the modern Australian culture.<br><br> With around one-fifth of Australians being born overseas, Australia is likely to get even more diverse in the future. <br><br>This visualisation serves to show immigration in 2022-2023 and past trends.
+            <p class="text" style="width:50%">
+                Ever since World War II, increased international migration into Australia has cultivated the modern Australian culture.<br><br> With around one-fifth of Australians being born overseas, Australia <br> is likely to get even more diverse in the future. <br><br>This visualisation serves to show immigration <span class="text-highlight">(all Visa types)</span> <br>in 2022 and past trends.
             </p>
         </div>
         <div class="grid-item span-two-columns grid-title">
             International Migration Patterns in Australia
         </div>
 
-        <div class="grid-item bottom-highlight">
-            <p class="text" style="text-align: justify;">
-                The map on the right shows netflow of international migration into each state.
+        <div class="text-grid grid-item bottom-highlight">
+            <p class="text">
+                The map on the right shows <span>netflow</span> of international <br>migration into each state in <span>2022</span>.
                 <br>
                 <br>
+                The values are shown as number of migrants <br> per 10,000 people living in the state.
+                <br><br>
                 Notable insights are:
                 <br>
                 <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; • ACT having high normalised value despite its size.
+                &nbsp;&nbsp; • <span>ACT</span> having <span>high</span> number of migrants despite its size.
                 <br>
                 <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; • Victoria having the highest netflow of immigrants at 230.
+                &nbsp;&nbsp; • <span>Victoria</span> having the <span>highest</span> netflow of immigrants <br>of 230.
                 <br>
                 <br>
-                &nbsp;&nbsp;&nbsp;&nbsp; • Tasmania having the lowest netflow of immigrants at 69.
+                &nbsp;&nbsp; • <span>Tasmania</span> having the <span>lowest</span> netflow of immigrants <br>of 69.
                 
             </p>
         </div>
 
-        <div class="grid-item bottom-highlight" id="map_chart">
+        <div class="grid-item bottom-highlight">
+            <div class="box-shadow" id="map_chart"></div>
             <script>
                         var vg_1 = "map.vg.json";
-        vegaEmbed("#map_chart", vg_1).then(function(result) {
+        vegaEmbed("#map_chart", vg_1,  {"actions": false}).then(function(result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
             </script>
@@ -59,24 +66,29 @@
             Top Countries of International Migration into Australia
         </div>
 
-        <div class="grid-item bottom-highlight">
-            <p class="text" style="text-align: justify;">
-                With most migrants being from Asia, this bar
+        <div class="text-grid grid-item bottom-highlight">
+            <p class="text">
+                With most migrants being from Asia, this bar graph
                 <br>
                 helps pinpoint the specific countries they are from.
 
                 <br>
                 <br>
-                Specifically, the bar shows the top countries migrants are from as of 2022.
+                The bar graph shows the <span>top countries</span> <br>migrants are coming from in 2022.
                 <br>
                 <br>
-                A slider exists below the map to show up to 10 countries.
+                The top country in 2022 is <span>India</span>, with <span>92,940</span> migrants.
+                <br><br>
+                A slider exists below the chart to show up to 10 countries.
             </p>
         </div>  
-        <div class="grid-item bottom-highlight" id="country-bar"></div>
+        <div class="grid-item bottom-highlight">
+            <div class="box-shadow" id="country-bar"></div>
+
+        </div>
         <script>
             var vg_4 = "top_country.vg.json";
-vegaEmbed("#country-bar", vg_4).then(function(result) {
+vegaEmbed("#country-bar", vg_4 ,  {"actions": false}).then(function(result) {
 // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 </script>
@@ -84,22 +96,25 @@ vegaEmbed("#country-bar", vg_4).then(function(result) {
         <div class="grid-item span-two-columns grid-title">
             Inflow/Outflow Trends Across Time
         </div>
-        <div class="grid-item bottom-highlight">
-            <p class="text" style="text-align: justify;">
+        <div class="text-grid grid-item bottom-highlight">
+            <p class="text">
                 This diverging bar chart shows inflow versus outflow over time.
                 <br>
                 <br>
                 Interestingly, inflow greatly beats outflow throughout most years.
                 <br>
                 <br>
-                However, the pandemic resulted in a huge temporary shift towards emigration.
+                Evidently, the pandemic resulted in a <span>huge</span> temporary shift towards <span>outflows</span>.
+                <br>
+                <br>
+                However, a <span>major increase in inflow</span> can be seen after <br> the pandemic subsided.
             </p>
         </div>
-        <div class="grid-item bottom-highlight" id="diverging">
-            
+        <div class="grid-item bottom-highlight" >
+            <div class="box-shadow" id="diverging"></div>
             <script>
                 var vg_2 = "diverging.vg.json";
-vegaEmbed("#diverging", vg_2).then(function(result) {
+vegaEmbed("#diverging", vg_2,  {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
     </script>
@@ -109,22 +124,25 @@ vegaEmbed("#diverging", vg_2).then(function(result) {
         <div class="grid-item span-two-columns grid-title">
             Net Flow Trends by State
         </div>
-        <div class="grid-item bottom-highlight" >
-            <p class="text" style="text-align: justify;">
+        <div class="text-grid grid-item bottom-highlight" >
+            <p class="text">
                 In contrast to the previous plot, this graph breaks
                 <br>
                 the flow values down into individual states. 
                 <br><br>
                 This allows you to visualise specific trends in each state.
                 <br><br>
-                Some states were affected by the pandemic more than others.
+                Similar to the previous graph, these states were greatly <br> affected by the pandemic, <span>some more than others</span>.
+                <br><br>
+                However, after the pandemic subsided, some states' migration numbers <span>skyrocketed</span>, beating their numbers even  before the pandemic.
 
             </p>
         </div>
-        <div class="grid-item bottom-highlight"id="line_chart">
+        <div class="grid-item bottom-highlight">
+            <div class="box-shadow" id="line_chart"></div>
             <script>
                 var vg_3 = "line_chart.vg.json";
-vegaEmbed("#line_chart", vg_3).then(function(result) {
+vegaEmbed("#line_chart", vg_3,  {"actions": false}).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
     </script>
@@ -132,7 +150,7 @@ vegaEmbed("#line_chart", vg_3).then(function(result) {
       </div>
       <br>
       <br>
-      <p>This dashboard was created by author Racharit Ramnarong as part of an assessment within FIT3179 in Monash University, Australia, and was submitted on October 13, 2024.<br><br> The data used was provided by the Australian Bureau of Statistics <i>(Net overseas migration by country of birth, state/territory)</i></p>
+      <p style="font-family: Arial; color: #286d86">This dashboard was created by author Racharit Ramnarong as part of an assessment within FIT3179 in Monash University, Australia. <br>Submitted on October 13, 2024.<br><br> The data used was provided by the Australian Bureau of Statistics <i>(Net overseas migration by country of birth, state/territory)</i></p>
       <br><br>
 </body>
 </html>

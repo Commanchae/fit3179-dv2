@@ -1,4 +1,4 @@
-"state","year","inflow","outflow","netflow","population"
+"state","year","Inflow","Outflow","netflow","population"
 "AUS",2004,161560,-18940,142620,20046003
 "AUS",2005,187050,-15270,171780,20311543
 "AUS",2006,245890,-13040,232850,20627547

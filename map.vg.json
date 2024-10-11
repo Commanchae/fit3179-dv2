@@ -54,7 +54,9 @@
   "layer": [
     {
       "mark": {
-        "type": "geoshape"
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 1
       },
       "encoding": {
         "color":{
@@ -93,10 +95,15 @@
       }
     },
     {
+      "transform": [
+        {"calculate": "datum.properties.ste_iso3166_code == 'ACT' ? -10 : 0",
+      "as": "dy"}
+      ],
       "mark":{
         "type":"text",
         "font": "Arial",
-        "dy": -10
+        "fontWeight":"bold",
+        "dy": {"expr": "datum.dy"}
       },
       "encoding":{
         "longitude": {"field": "properties.geo_point_2d.lon",
