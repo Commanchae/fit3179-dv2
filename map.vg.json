@@ -53,6 +53,9 @@
   ],
   "layer": [
     {
+      "transform": [
+        {"calculate": "'In 2022, about ' + round(datum.normalized_netflow,2) + ' internationals (per 10,000 population) came into ' + datum.properties.ste_name[0] + '.'", "as": "Insight"}
+      ],
       "mark": {
         "type": "geoshape",
         "stroke": "white",
@@ -81,15 +84,9 @@
         },
         "tooltip": [
           {
-            "field": "properties.ste_name[0]",
+            "field": "Insight",
             "type": "nominal",
-            "title": "State"
-          },
-          {
-            "field": "normalized_netflow",
-            "type": "quantitative",
-            "title": "Net Flow of Migrants (per 10,000 population)",
-            "format": ".3"
+            "title": "Insight"
           }
         ]
       }
@@ -97,7 +94,8 @@
     {
       "transform": [
         {"calculate": "datum.properties.ste_iso3166_code == 'ACT' ? -10 : 0",
-      "as": "dy"}
+      "as": "dy"},
+      {"calculate": "'In 2022, about ' + round(datum.normalized_netflow,2) + ' internationals (per 10,000 population) came into ' + datum.properties.ste_name[0] + '.'", "as": "Insight"}
       ],
       "mark":{
         "type":"text",
@@ -118,15 +116,9 @@
         },
         "tooltip": [
           {
-            "field": "properties.ste_name[0]",
+            "field": "Insight",
             "type": "nominal",
-            "title": "State"
-          },
-          {
-            "field": "normalized_netflow",
-            "type": "quantitative",
-            "title": "Net Flow of Migrants (per 10,000 population)",
-            "format": ".3"
+            "title": "Insight"
           }
         ]
       }
@@ -145,10 +137,10 @@
       
     },
     {
-      "data": {"values": [{"x": 1.24, "y": 0.9}]},
+      "data": {"values": [{"x": 1.24, "y": 0.8}]},
       "mark": {"type": "text", "angle": 0, "dx": -125, "dy":17, "fontSize": 12},
       "encoding": {
-        "text": {"value": "(Victoria) Highest migration of 230"},
+        "text": {"value": "(Victoria) Highest migration – 230 people"},
         "x": {"field": "x", "type": "quantitative"},
         "y": {"field": "y", "type": "quantitative"},
         "color": {
@@ -158,7 +150,7 @@
       
     },
     {
-      "data": {"values": [{"x": 1.40, "y": 0.25}]},
+      "data": {"values": [{"x": 1.42, "y": 0.25}]},
       "mark": {"type": "text", "angle": -180, "dx": -20, "fontSize": 35},
       "encoding": {
         "text": {"value": "➟"},
@@ -171,10 +163,10 @@
       
     },
     {
-      "data": {"values": [{"x": 1.57, "y": 0.25}]},
+      "data": {"values": [{"x": 1.65, "y": 0.25}]},
       "mark": {"type": "text", "angle": 0, "dx": 90,"fontSize": 12},
       "encoding": {
-        "text": {"value": "(Tasmania) Lowest migration of 69"},
+        "text": {"value": "(Tasmania) Lowest migration – 69 people"},
         "x": {"field": "x", "type": "quantitative"},
         "y": {"field": "y", "type": "quantitative"},
         "color": {
@@ -226,7 +218,7 @@
       "data": {"values": [{"x": 0.30, "y": 3.13}]},
       "mark": {"type": "text", "angle": 0,"fontSize": 12},
       "encoding": {
-        "text": {"value": "of 217"},
+        "text": {"value": "217 people"},
         "x": {"field": "x", "type": "quantitative"},
         "y": {"field": "y", "type": "quantitative"},
         "color": {

@@ -10,11 +10,16 @@
       "transform": [
         {
           "calculate": "(parseInt(datum.netflow)/datum.population)*10000",
-          "as": "netflow"
+          "as": "netflow"  
+        },
+        {
+          "calculate": "datum.state == 'NSW' ? 'New South Wales ': datum.state == 'VIC' ? 'Victoria' : datum.state == 'QLD' ? 'Queensland': datum.state == 'WA' ? 'Western Australia' : datum.state == 'SA' ? 'South Australia' : datum.state == 'TAS' ? 'Tasmania' : datum.state == 'ACT' ?  'Australian Capital Territory' : 'Northern Territory'",
+          "as": "statename"
         },
         {
           "filter": "datum.state != 'AUS'"
-        }
+        },
+        {"calculate": "'In ' + timeFormat(datum.year, '%Y') + ', ~'+ round(datum.netflow,2) + ' internationals (per 10,000 population) came into '  +  datum.statename + '.'", "as": "Insight"}
       ],
       "layer": [
         {
@@ -102,21 +107,9 @@
             },
             "tooltip": [
               {
-                "title": "Year",
-                "field": "year",
-                "type": "temporal",
-                "timeUnit": "year"
-              },
-              {
-                "title": "State",
-                "field": "state",
+                "title": "Insight",
+                "field": "Insight",
                 "type": "nominal"
-              },
-              {
-                "title": "Netflow",
-                "field": "netflow",
-                "type": "quantitative",
-                "format": ".0f"
               }
             ]
           }
