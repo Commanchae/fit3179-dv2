@@ -140,7 +140,7 @@
       "data": {"values": [{"x": 1.24, "y": 0.8}]},
       "mark": {"type": "text", "angle": 0, "dx": -125, "dy":17, "fontSize": 12},
       "encoding": {
-        "text": {"value": "(Victoria) Highest migration – 230 people"},
+        "text": {"value": "(Victoria) Highest migration – 230"},
         "x": {"field": "x", "type": "quantitative"},
         "y": {"field": "y", "type": "quantitative"},
         "color": {
@@ -166,7 +166,7 @@
       "data": {"values": [{"x": 1.65, "y": 0.25}]},
       "mark": {"type": "text", "angle": 0, "dx": 90,"fontSize": 12},
       "encoding": {
-        "text": {"value": "(Tasmania) Lowest migration – 69 people"},
+        "text": {"value": "(Tasmania) Lowest migration – 69"},
         "x": {"field": "x", "type": "quantitative"},
         "y": {"field": "y", "type": "quantitative"},
         "color": {
@@ -218,7 +218,7 @@
       "data": {"values": [{"x": 0.30, "y": 3.13}]},
       "mark": {"type": "text", "angle": 0,"fontSize": 12},
       "encoding": {
-        "text": {"value": "217 people"},
+        "text": {"value": "of 217"},
         "x": {"field": "x", "type": "quantitative"},
         "y": {"field": "y", "type": "quantitative"},
         "color": {
